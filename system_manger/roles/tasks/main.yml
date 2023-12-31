@@ -1,2 +1,8 @@
+
+
 ---
-# tasks file for roles
+- import_tasks: install_software.yml
+- import_tasks: manage_users.yml
+- import_tasks: manage_git_repositories.yml
+- import_tasks: create_folder_structure.yml
+- import_tasks: manage_system_settings.yml
