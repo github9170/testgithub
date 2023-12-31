@@ -1,0 +1,15 @@
+# playbook.yml
+- hosts: your_servers
+  become: true
+
+  roles:
+    - role: system_manager
+      vars:
+        software_list:
+          - nginx
+          - mysql-server
+          - mysql-client
+        git_repositories:
+          - repo: https://github.com/opstree/spring3hibernate.git
+            dest: /path/to/your/local/repo
+        # Add other variables as needed

@@ -1,0 +1,8 @@
+
+---
+- name: Ensure users are present
+  user:
+    name: "{{ item.name }}"
+    state: present
+    groups: "{{ item.groups }}"
+  with_items: "{{ users_to_manage }}"

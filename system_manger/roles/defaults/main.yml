@@ -1,2 +1,17 @@
----
-# defaults file for roles
+# defaults/main.yml
+software_list:
+  - nginx
+  - git
+users_to_manage:
+  - name: ajay
+    groups: developers
+  - name: raj
+    groups: administrators
+git_repositories:
+  - repo: https://github.com/opstree/spring3hibernate.git
+    dest: /home
+folder_structure:
+  - /home/applications
+  - /home/logs
+system_settings:
+  example_setting: value
